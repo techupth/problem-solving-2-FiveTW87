@@ -2,6 +2,20 @@
 
 const fizzBuzz = function (n) {
   //Start coding here
+  let emtryArray = [];
+  for (let i = 1; i <= n; i++) {
+    emtryArray.push(i.toString());
+  }
+  for (let j = 0; j < emtryArray.length; j++) {
+    if (emtryArray[j] % 15 === 0) {
+      emtryArray[j] = "FizzBuzz"
+    } else if (emtryArray[j] % 3 === 0) {
+      emtryArray[j] = "Fizz";
+    } else if (emtryArray[j] % 5 === 0) {
+      emtryArray[j] = "Buzz";
+    }
+  }
+  return emtryArray;
 };
 
 const result1 = fizzBuzz(3);
